@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog Page</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+<body id="blog">
+    <!--<video autoplay muted loop id="bg-vid">
+        <source src="assets/videos/294889_1080p.mp4" type="video/mp4">
+        <source src="assets/videos/294889_1080p.webm" type="video/webm">
+    </video>-->
+    <img id="bg-img" src="assets/landscape-1626366026376-7311.jpg" alt="background image">
+    <div id="navbar-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <nav class="navbar-vertical collapsed">
+        <ul class="nav-list">
+            <li class="nav-cont"><a href="#">Home</a></li>
+            <li class="nav-cont"><a href="#">New Post</a></li>
+            <li class="nav-cont"><a href="#">Account</a></li>
+            <li class="nav-cont"><a href="#">Sign Up</a></li>
+        </ul>
+    </nav>
+
+    <div class="cover-title">
+        <div class="cover-fixed">
+            <h1 class="header-t">Join Today</h1>
+            <h3 class="title-sentence">
+                Be a part of the <span class="text-bold color-orangered">FAMILY</span>
+            </h3>
+            <div class="register-btn-wrapper">
+                <button class="register-btn">Register Now!</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-wrapper">
+        <div class="bar">
+            <h1 class="center1-title"> <div class="bar-title">Start Your Blogging Journey</div></h1>
+
+        </div>
+        <div class="content1" id="sticky-area">
+            <div class="content1-left" id="blog 1">
+                <div class="content-text" id="text1">
+                    <h3 class="center-title" id="Title1"><a class="clean-link" href="#Story">Your Story</a></h3>
+                    <h5 class="center-content" id="paragraph1">Share what you love</h5>
+                </div>
+            </div>
+            <div class="content1-right" id="blog 2">
+                <div class="content-text" id="text2">
+                    <h3 class="center-title" id="Title2"><a class="clean-link" href="#OOTD">OOTD</a></h3>
+                    <h5 class="center-content" id="paragraph2">Share Outfits, Rate Outfits</h5>
+                </div>
+            </div>
+        </div>
+        <br/>
+        <div class="content2">
+            <div class="content-text" id="text3">
+                <h3 class="center-title" id="Title3"><a class="clean-link" href="#Adventures">Adventures</a></h3>
+                <h5 class="center-content" id="paragraph3">Relive Your Journeys</h5>
+            </div>
+        </div>
+
+    </div>
+    <div class="end-bar">
+        <span>Home</span>
+        <span>New Post</span>
+        <span>Account</span>
+        <span>Sign Up</span>
+    </div>
+    <footer></footer>
+
+    <script>
+        // Sidebar animation
+        $(document).ready(function(){
+            $('#navbar-toggle').click(function(){
+                $(this).toggleClass('open');
+                $('.navbar-vertical').toggleClass('collapsed');
+            });
+        });
+
+        // Fade to solid color as page is scrolled down
+        document.addEventListener('scroll', function() {
+            if (window.scrollY > window.innerHeight * 0.4 && window.scrollY < window.innerHeight) {
+                document.getElementById('bg-img').style.opacity = map(window.scrollY, window.innerHeight * 0.4, window.innerHeight * 0.9, 1, 0);
+            }
+        });
+
+        // Number map function (from Arduino spec)
+        function map(x, in_min, in_max, out_min, out_max) {
+            return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
+        }
+    </script>
+</body>
+</html>
