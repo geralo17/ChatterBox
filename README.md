@@ -1,2 +1,3 @@
-# ChatterBox
-A brief utilization of the skills I thought myself (watching youtube vids) in HTML, CSV, and JAVAscript
+# Chatterbox
+An exploration into HTML and CSS
+ hello4
